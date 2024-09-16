@@ -3,15 +3,17 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
+import maskothjerte from "../assets/images/heart.svg";
 ---
 
 <MainLayout title="Titel">
   <article>
-    <h1>Digital skraldedag</h1>
-    <h2>Sådan laver du en digital oprydning</h2>
+    <h1 class="text-grøn">Digital skraldedag</h1>
+    <h2 class="text-hvid">Sådan laver du en digital oprydning</h2>
+    <Image src={maskothjerte} alt="Maskot former hjerte" />
   </article>
   <article>
-    <h2>TRIN 1</h2>
+    <h2 class="text-grøn">TRIN 1</h2>
     <h3>Ryd op på din smartphone</h3>
     <p>
       Fjern alle programmer, som du ikke har brugt i et stykke tid, eller som du
@@ -23,31 +25,30 @@ import { Image } from "astro:assets";
     </p>
   </article>
   <article>
-    <h2>TRIN 2</h2>
+    <h2 class="text-grøn">TRIN 2</h2>
     <h3>Ryd op på din computers harddisk</h3>
     <p>
       Sorter din personlige computer og slet filer, der er dubletter eller er
       blevet ubrugelige. Gå gennem alle dine billeder, slet dubletter og
       slørede. Tjek videofilerne og slet sete eller unødvendige. Arkiver de
       vigtige filer. Vær forberedt på at finde virkelig fantastiske ting på din
-      computer! Se retningslinjerne  for, hvordan du renser din computer og
-      drev.
+      computer! Se retningslinjerne for, hvordan du renser din computer og drev.
     </p>
   </article>
   <article>
-    <h2>TRIN 3</h2>
+    <h2 class="text-grøn">TRIN 3</h2>
     <h3>Ryd op i din postkasse</h3>
     <p>
       Filtrer e-mails efter den ældste, og arkiver dem. Afmeld nyhedsbreve, du
       ikke engang læser. Vælg lange samtaler, vælg den nyeste og slet alt andet!
       Søg efter almindelige navne, adresser og ord for at samle lignende
       e-mails, så du kan håndtere dem i massevis. Vær modig og klik på
-      slet-knappen.  Se retningslinjerne for, hvordan du rydder op i din
+      slet-knappen. Se retningslinjerne for, hvordan du rydder op i din
       postkasse.
     </p>
   </article>
   <article>
-    <h2>TRIN 4</h2>
+    <h2 class="text-grøn">TRIN 4</h2>
     <h3>Lav nye arrangementer</h3>
     <p>
       Brug flere samarbejdspladser i stedet for at sende e-mails. Stop med at
@@ -59,3 +60,14 @@ import { Image } from "astro:assets";
     </p>
   </article>
 </MainLayout>
+
+<style>
+  p {
+    color: #f4f4f4;
+  }
+
+  h3 {
+    color: #f4f4f4;
+    font-weight: bold;
+  }
+</style>
