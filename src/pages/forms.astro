@@ -8,13 +8,23 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 <MainLayout title="Titel">
   <article>
-    <h1>Index overskrift</h1>
-    <Button>Klik!</Button>
-    <p>
-      Link til <Link href="https://www.kea.dk" target="_blank">
-        En anden side
-      </Link>
-    </p>
-    <Image src={thumbsup} alt="" />
+    <section class="bg-hvid py-10">
+      <h1>Giv dit bidrag</h1>
+      <h3 class="text-sort">
+        Fortæl os hvor mange GB du har slettet i kampen mod digital forurening.
+      </h3>
+      <div></div>
+      <!-- Navn -->
+      <div class="pb-5">
+        <label for="navn" class="block text-sort">Navn*</label>
+        <input
+          type="text"
+          id="Navn"
+          name="Navn"
+          placeholder="Navn"
+          class="w-90% p-2 border border-gray-300 rounded-lg align-items-center"
+        />
+      </div>
+    </section>
   </article>
 </MainLayout>
