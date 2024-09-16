@@ -7,24 +7,104 @@ import thumbsup from "../assets/images/thumbsup.png";
 ---
 
 <MainLayout title="Titel">
-  <article>
-    <section class="bg-hvid py-10">
-      <h1>Giv dit bidrag</h1>
-      <h3 class="text-sort">
-        Fortæl os hvor mange GB du har slettet i kampen mod digital forurening.
-      </h3>
-      <div></div>
-      <!-- Navn -->
-      <div class="pb-5">
-        <label for="navn" class="block text-sort">Navn*</label>
-        <input
-          type="text"
-          id="Navn"
-          name="Navn"
-          placeholder="Navn"
-          class="w-90% p-2 border border-gray-300 rounded-lg align-items-center"
-        />
-      </div>
-    </section>
+  <article class="">
+    <div class="bg-hvid z-1500 m-8">
+      <section class="p-5 pt-10 z-1000">
+        <h1 class="font-verdana font-bold place-content-center grid pb-2">
+          Giv dit bidrag
+        </h1>
+        <h3 class="text-sort font-verdana place-content-center grid pb-5">
+          Fortæl os hvor mange GB du har slettet i kampen mod digital
+          forurening.
+        </h3>
+
+        <!-- Navn -->
+        <div class="pb-5 place-content-center grid">
+          <label for="navn" class="block text-sort font-arial font-bold"
+            >Navn *</label
+          >
+          <input
+            type="text"
+            id="Navn"
+            name="Navn"
+            placeholder=""
+            class="px-2 py-2 bg-white border-2 border-black text-black text-lg rounded-lg shadow-[4px_4px_0px_0px_#7E86FF] hover:shadow-none"
+          />
+        </div>
+        <!-- Efternavn  -->
+        <div class="pb-5 place-content-center grid">
+          <label for="navn" class="block text-sort font-arial font-bold"
+            >Efternavn *</label
+          >
+          <input
+            type="text"
+            id="Efternavn"
+            name="Efternavn"
+            placeholder=""
+            class="px-2 py-2 bg-white border-2 border-black text-black text-lg rounded-lg shadow-[4px_4px_0px_0px_#FEB3D2] hover:shadow-none"
+          />
+        </div>
+        <!-- Email -->
+        <div class="pb-5 place-content-center grid">
+          <label for="Email" class="block text-sort font-arial font-bold"
+            >Email *</label
+          >
+          <input
+            type="text"
+            id="Email"
+            name="Email"
+            placeholder=""
+            class="px-2 py-2 bg-white border-2 border-black text-black text-lg rounded-lg shadow-[4px_4px_0px_0px_#CDF545] hover:shadow-none"
+          />
+        </div>
+        <!-- GB -->
+        <div class="pb-5 place-content-center grid">
+          <label
+            for="Antal slettet GB"
+            class="block text-sort font-arial font-bold"
+            >Antal slettet GB *</label
+          >
+          <input
+            type="text"
+            id="GB"
+            name="GB"
+            placeholder=""
+            class="px-2 py-2 bg-white border-2 border-black text-black text-lg rounded-lg shadow-[4px_4px_0px_0px_#36B7FF] hover:shadow-none"
+          />
+        </div>
+        <!-- Telefon -->
+        <div class="pb-5 place-content-center grid">
+          <label for="Telefon" class="block text-sort font-arial font-bold"
+            >Telefon *</label
+          >
+          <input
+            type="text"
+            id="Telefon"
+            name="Telefon"
+            placeholder=""
+            class="px-2 py-2 bg-white border-2 border-black text-black text-lg rounded-lg shadow-[4px_4px_0px_0px_#FED12E] hover:shadow-none"
+          />
+        </div>
+        <!-- Levering -->
+        <div class="pb-5 place-content-center grid">
+          <div class="">
+            <div class="">
+              <input type="radio" id="vilkaar" value="PostDK" />
+              <label for="postdk" class="text-baggrund"
+                >Jeg er enig i vilkår og betingelser *</label
+              >
+            </div>
+            <div>
+              <input type="radio" id="nyhedsbrev" value="afhent" />
+              <label for="afhent" class="text-baggrund">Tilmed nyhedsbrev</label
+              >
+            </div>
+          </div>
+        </div>
+        <div class="place-content-center grid">
+          <Button>Registrer</Button>
+        </div>
+      </section>
+    </div>
   </article>
 </MainLayout>

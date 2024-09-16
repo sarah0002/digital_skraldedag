@@ -12,6 +12,15 @@ export default {
             'lilla': '#7E86FF',
             'blå': '#36B7FF',
           },},
+
+          fontFamily: {
+            verdana: ['Verdana', 'sans-serif'], 
+          },
+
+          fontFamily:{
+            arial:['Arial', 'sans-serif'], 
+          }
+
 	},
 	plugins: [
         require('@tailwindcss/typography'),
