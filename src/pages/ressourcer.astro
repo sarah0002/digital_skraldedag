@@ -1,0 +1,35 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import mainmaskot from "../assets/images/main.svg";
+import sweatmaskot from "../assets/images/sweat.svg";
+import friendsmaskot from "../assets/images/friends.svg";
+---
+
+<MainLayout title="Titel">
+  <article>
+    <section>
+      <h1 class="text-grøn font-verdana font-bold pb-10 p-5 lg:pl-56">
+        Ressourcer <br /> og materialers
+      </h1>
+    </section>
+    <hr />
+    <section
+      class="grid py-10 grid-cols-1 justify-items-center text-center gap-10"
+    >
+      <Button>Retningslinjer for enkeltpersoner</Button>
+      <Button>Retningslinjer for virksomheder</Button>
+      <Button>Retningslinjer for skoler</Button>
+      <Button>Retningslinjer for kommuner</Button>
+      <Button>Sådan rydder du op på din computer og drev</Button>
+      <Button>Sådan rydder du op i dine e-mails</Button>
+      <Button>Sådan rydder du op på din smartphone og tablet</Button>
+      <Button>Indsamling af deltagerdata 1</Button>
+      <Button>Indsamling af deltagerdata 2</Button>
+      <Button>Markedsføringsmateriale</Button>
+    </section>
+    <hr />
+  </article>
+</MainLayout>
