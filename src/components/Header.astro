@@ -12,6 +12,9 @@ import Link from "../components/Link.astro";
     </div>
     <nav id="desktopmenu" class="hidden lg:block">
       <ul class="flex flex-row gap-4 text-hvid verdana">
+        <li class="">
+          <Link href="/ressourcer">Ressourcer og materialer</Link>
+        </li>
         <li class=""><Link href="/howto">Sådan deltager du</Link></li>
         <li class=""><Link href="/forms">Registrer dit bidrag</Link></li>
       </ul>
@@ -39,6 +42,9 @@ import Link from "../components/Link.astro";
     x-on:click.outside="showmenu = false"
   >
     <ul class="Verdana">
+      <li class="text-center text-hvid py-2">
+        <Link href="/ressourcer">Ressourcer og materialer</Link>
+      </li>
       <li class="text-center text-hvid py-2">
         <Link href="/howto">Sådan deltager du</Link>
       </li>
