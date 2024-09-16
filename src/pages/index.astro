@@ -3,11 +3,55 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
+import mainmaskot from "../assets/images/main.svg";
+import sweatmaskot from "../assets/images/sweat.svg";
+import friendsmaskot from "../assets/images/friends.svg";
 ---
 
 <MainLayout title="Digital skraldedag">
-  <article>
-    <h1>Index overskrift</h1>
+  <article id="index_header">
+    <h1 class="text-grøn">Digital skraldedag</h1>
+    <h2 class="text-pink">15 marts 2024</h2>
+    <p class="text-hvid">Digital Cleanup Day er en dag dedikeret til at rydde op i vores digitale liv, ligesom vi rydder op i vores fysiske miljø på World Cleanup Day.</p>
+    <Image src={mainmaskot} alt="Maskot til Digital Skraldedag"/>
+    <button>SAVE THE DATE</button>
   </article>
+
+  <section id="index_facts">
+    <div class="">
+    <h2 class="text-grøn">Hvad er digitaltskrald?</h2>
+    <p class="text-hvid">Digitalt affald refererer til al data, der bliver gemt online unødigt. Gamle billeder, unødvendige beskeder, reklame-e-mails og internetdownloads, blandt andet. Al denne aktivitet udleder tons CO2, der forurener planeten.</p>
+    </div>
+     <div class="">
+    <h2 class="text-grøn">Vidste du...?</h2>
+    <p class="text-hvid">Ud over at være et miljøproblem er e-affald også et klimaproblem. Elektroniske enheder kræver råmaterialer, herunder sjældne jordarters metaller, der udvindes og behandles i en meget energikrævende proces, hovedsagelig drevet af fossile brændstoffer.</p>
+    </div>
+    <div class="">
+      <h2 class="text-grøn">Registrer dit bidrag</h2>
+      <ul class="text-hvid">
+        <li>Det kræver mere energi at mine for BitCoin, end hele New Zealand bruger på et år!</li>
+        <li>På kun et år (2007) blev der skabt én zettabyte data på verdensplan. I 2010 var dette fordoblet. I 2035 vil vi skabe mere end 2.000 zettabyte. For at udskrive en zettabyte data skal du bruge papiret fra 20 billioner træer. Der er kun omkring 3,5 billioner træer tilbage på planeten, så det er ikke muligt.</li>
+        <li>I 2022 blev omkring 70 millioner servere brugt til at lagre data. Hver af dem forårsagede produktion af 1-2 tons CO2. I det år blev omkring 20 millioner af dem til e-affald.</li>
+        <li>99 % af dataene blev skabt inden for de sidste 10 år.</li>
+        <li>Ubegrænset forbrug af data i dag kræver 3 gange mere energi end alle de solpaneler, verden kan producere!</li>
+      </ul>
+    </div>
+  </section>
+
+  <article id="index_action">
+    <div class="">
+      <h2 class="text-grøn">Registrer dit bidrag</h2>
+      <p class="text-hvid">Vær cool – lad være med at fodre global opvarmning med digitalt affald</p>
+       <Image src={sweatmaskot} alt="Maskot til Digital Skraldedag"/>
+       <button>DIT BIDRAG</button>
+    </div>
+      <div class="">
+       <Image src={friendsmaskot} alt="Maskot til Digital Skraldedag"/>
+       <button>INVITER DIN VEN</button>
+    </div>
+  </article>
+
+  <section id="index_infotal">
+    <h2 class="text-grøn">Digital skraldedag i tal</h2>
+  </section>
 </MainLayout>
