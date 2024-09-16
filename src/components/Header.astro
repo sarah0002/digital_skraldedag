@@ -2,13 +2,16 @@
 import Link from "../components/Link.astro";
 ---
 
-<div x-data="{ showmenu: false }" class="p-4 fixed lg:static w-full bg-farve2">
+<div
+  x-data="{ showmenu: false }"
+  class="p-4 fixed lg:static w-full bg-sort sticky top-0"
+>
   <div id="navbar" class="flex flex-row justify-between py-5 px-2 z-1000">
-    <div id="logo" class="text-baggrund montserrat">
+    <div id="logo" class="text-hvid">
       <a href="/index">Site logo</a>
     </div>
     <nav id="desktopmenu" class="hidden lg:block">
-      <ul class="flex flex-row gap-4 text-baggrund verdana">
+      <ul class="flex flex-row gap-4 text-hvid verdana">
         <li class=""><Link href="/howto">Sådan deltager du</Link></li>
         <li class=""><Link href="/forms">Registrer dit bidrag</Link></li>
       </ul>
@@ -18,7 +21,7 @@ import Link from "../components/Link.astro";
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="size-5 fill-farve3"
+        class="size-5 fill-hvid"
       >
         <path
           fill-rule="evenodd"
@@ -29,17 +32,17 @@ import Link from "../components/Link.astro";
   </div>
   <nav
     id="mobilmenu"
-    class="flex flex-col content-center pt-4"
+    class="flex flex-col content-center"
     x-show="showmenu"
     x-transition
     x-on:click="showmenu = false"
     x-on:click.outside="showmenu = false"
   >
     <ul class="Verdana">
-      <li class="text-center text-baggrund py-2">
+      <li class="text-center text-hvid py-2">
         <Link href="/howto">Sådan deltager du</Link>
       </li>
-      <li class="text-center text-baggrund py-2">
+      <li class="text-center text-hvid py-2">
         <Link href="/forms">Registrer dit bidrag</Link>
       </li>
     </ul>
