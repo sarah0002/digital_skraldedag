@@ -7,115 +7,169 @@ import thumbsup from "../assets/images/thumbsup.png";
 ---
 
 <MainLayout title="Titel">
-  <article class="">
-    <div class="bg-hvid z-1500 m-8 lg:mr-60 lg:ml-60 rounded-lg">
-      <section class="p-5 pt-10 z-1000">
-        <h1 class="font-verdana font-bold place-content-center grid pb-2">
+  <article class="relative">
+    <!-- Baggrundsfarve til sort -->
+    <!-- Form container -->
+    <div
+      class="bg-hvid z-[1500] m-8 lg:mr-60 lg:ml-60 rounded-lg relative p-12 lg:p-10"
+      style="
+      background-color:
+      rgba(255,
+      255,
+      255,
+      0.8);"
+    >
+      <section class="relative">
+        <h1 class="font-verdana font-bold text-6xl text-center pb-4">
           Giv dit bidrag
         </h1>
-        <h3 class="text-sort font-verdana place-content-center grid pb-5">
+        <h3 class="text-sort font-verdana text-center pb-5">
           Fortæl os hvor mange GB du har slettet i kampen mod digital
           forurening.
         </h3>
-        <div class="lg:grid lg:grid-cols-2">
+        <div class="lg:grid lg:grid-cols-2 gap-4 grid justify-items-center">
           <!-- Navn -->
-          <div class="pb-5 place-content-center grid">
+          <div class="pb-5">
             <label for="navn" class="block text-sort font-arial font-bold"
-              >Navn *</label
+              >Navn*</label
             >
             <input
               type="text"
               id="Navn"
               name="Navn"
               placeholder=""
-              class="px-2 py-2 bg-white border-2 border-black text-black text-lg rounded-lg shadow-[4px_4px_0px_0px_#7E86FF] hover:shadow-none"
+              class="px-3 py-3 bg-white border-2 border-black text-black text-lg rounded-lg shadow-[4px_4px_0px_0px_#7E86FF] hover:shadow-none"
             />
           </div>
-          <!-- Efternavn  -->
-          <div class="pb-5 place-content-center grid">
-            <label for="navn" class="block text-sort font-arial font-bold"
-              >Efternavn *</label
+          <!-- Efternavn -->
+          <div class="pb-5">
+            <label for="Efternavn" class="block text-sort font-arial font-bold"
+              >Efternavn*</label
             >
             <input
               type="text"
               id="Efternavn"
               name="Efternavn"
               placeholder=""
-              class="px-2 py-2 bg-white border-2 border-black text-black text-lg rounded-lg shadow-[4px_4px_0px_0px_#FEB3D2] hover:shadow-none"
+              class="px-3 py-3 bg-white border-2 border-black text-black text-lg rounded-lg shadow-[4px_4px_0px_0px_#FEB3D2] hover:shadow-none"
             />
           </div>
         </div>
-        <div class="lg:grid lg:grid-cols-2">
+
+        <div class="lg:grid lg:grid-cols-2 gap-4 grid justify-items-center">
           <!-- Email -->
-          <div class="pb-5 place-content-center grid">
+          <div class="pb-5">
             <label for="Email" class="block text-sort font-arial font-bold"
-              >Email *</label
+              >E-mail*</label
             >
             <input
               type="text"
               id="Email"
               name="Email"
               placeholder=""
-              class="px-2 py-2 bg-white border-2 border-black text-black text-lg rounded-lg shadow-[4px_4px_0px_0px_#CDF545] hover:shadow-none"
+              class="px-3 py-3 bg-white border-2 border-black text-black text-lg rounded-lg shadow-[4px_4px_0px_0px_#CDF545] hover:shadow-none"
             />
           </div>
           <!-- Telefon -->
-          <div class="pb-5 place-content-center grid">
+          <div class="pb-5">
             <label for="Telefon" class="block text-sort font-arial font-bold"
-              >Telefon *</label
+              >Telefon*</label
             >
             <input
               type="text"
               id="Telefon"
               name="Telefon"
               placeholder=""
-              class="px-2 py-2 bg-white border-2 border-black text-black text-lg rounded-lg shadow-[4px_4px_0px_0px_#FED12E] hover:shadow-none"
+              class="px-3 py-3 bg-white border-2 border-black text-black text-lg rounded-lg shadow-[4px_4px_0px_0px_#FED12E] hover:shadow-none"
             />
           </div>
         </div>
+
         <!-- GB -->
-        <div class="pb-5 place-content-center grid">
-          <label
-            for="Antal slettet GB"
-            class="block text-sort font-arial font-bold"
-            >Antal slettet GB *</label
+        <div class="pb-5 flex justify-items-center grid grid-cols-1">
+          <label for="GB" class="block text-sort font-arial font-bold"
+            >Antal slettet GB*</label
           >
           <input
             type="text"
             id="GB"
             name="GB"
             placeholder=""
-            class="px-2 py-2 bg-white border-2 border-black text-black text-lg rounded-lg shadow-[4px_4px_0px_0px_#36B7FF] hover:shadow-none"
+            class="px-3 py-3 bg-white border-2 border-black text-black text-lg rounded-lg shadow-[4px_4px_0px_0px_#36B7FF] hover:shadow-none"
           />
         </div>
 
-        <!-- Levering -->
-        <div class="pb-5 place-content-center grid">
-          <div class="">
-            <div class="">
-              <input type="radio" id="vilkaar" value="PostDK" />
-              <label for="postdk" class="text-baggrund"
-                >Jeg er enig i vilkår og betingelser *</label
+        <!-- Vilkår og Nyhedsbrev -->
+        <div class="pb-5 grid justify-items-center">
+          <div class="space-y-3">
+            <div>
+              <input type="checkbox" id="vilkaar" />
+              <label for="vilkaar" class="text-sort font-arial"
+                >Jeg er enig i vilkår og betingelser*</label
               >
             </div>
             <div>
-              <input type="radio" id="nyhedsbrev" value="afhent" />
-              <label for="afhent" class="text-baggrund">Tilmed nyhedsbrev</label
+              <input type="checkbox" id="nyhedsbrev" />
+              <label for="nyhedsbrev" class="text-sort font-arial"
+                >Tilmed nyhedsbrev</label
               >
             </div>
           </div>
         </div>
+
+        <!-- Registrer knap -->
         <div class="place-content-center grid">
-          <Button>Registrer</Button>
+          <Button class="bg-sort text-hvid px-5 py-3 rounded-lg">
+            Registrér
+          </Button>
         </div>
       </section>
     </div>
 
-    <section class="place-content-end grid absolute right-px lg:right-1/4">
+    <!-- Baggrundsformerne -->
+    <section class="absolute inset-0 z-500 pointer-events-none">
+      <img
+        src="src/assets/images/vector-6.svg"
+        alt=""
+        class="w-[60px] lg:w-[600px] absolute top-[150px] right-56 lg:right-[350px] z-500"
+      />
+      <img
+        src="src/assets/images/vector-1.svg"
+        alt=""
+        class="w-[300px] lg:w-[400px] absolute top-[150px] -left-6 lg:left-[150px] z-500"
+      />
+      <img
+        src="src/assets/images/vector-2.svg"
+        alt=""
+        class="w-[400px] lg:w-[400px] absolute top-[500px] -right-10 lg:right-[20px]"
+      />
+      <img
+        src="src/assets/images/vector-3.svg"
+        alt=""
+        class="w-[80px] absolute lg:w-[150px] top-[480px] lg:top-[560px] left-2 lg:left-[90px]"
+      />
+      <img
+        src="src/assets/images/vector-4.svg"
+        alt=""
+        class="w-[190px] lg:w-[180px] absolute top-[600px] -left-2 lg:left-[400px]"
+      />
+
+      <!-- højre -->
+      <img
+        src="src/assets/images/vector-3.svg"
+        alt=""
+        class="w-[200px] lg:w-[160px] absolute top-[200px] right-8 lg:right-[150px]"
+      />
+    </section>
+
+    <!-- Maskot og talebobbel -->
+    <section
+      class="absolute top-[850px] lg:top-[550px] right-4 lg:right-[300px] flex items-center space-x-3 z-[1600] pb-52"
+    >
       <img
         src="src/assets/images/helt.svg"
         alt="Mascot med talebobbel"
-        class=""
+        class="w-[400px] lg:w-[500px]"
       />
     </section>
   </article>
