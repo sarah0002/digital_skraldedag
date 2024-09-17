@@ -6,19 +6,26 @@ import { Image } from "astro:assets";
 import mainmaskot from "../assets/images/main.svg";
 import sweatmaskot from "../assets/images/sweat.svg";
 import friendsmaskot from "../assets/images/friends.svg";
-import pinkstar from "../assets/images/gb_icon.svg";
+import pinkstar from "../assets/images/vector-3.svg";
 import info1 from "../assets/images/people_icon.svg"
 import info2 from "../assets/images/gb_icon.svg"
 import info3 from "../assets/images/co2_icon.svg"
 ---
 
 <MainLayout title="Digital skraldedag">
-  <article id="index_header" class="pb-12 border-b-[2px] border-[#F4F4F4]">
-    <h1 class="text-grøn">Digital skraldedag</h1>
-    <h2 class="text-pink mt-2">15 marts 2024</h2>
-    <p class="text-hvid mt-4">Digital Cleanup Day er en dag dedikeret til at rydde op i vores digitale liv, ligesom vi rydder op i vores fysiske miljø på World Cleanup Day.</p>
-    <Image src={mainmaskot} alt="Maskot til Digital Skraldedag"/>
-    <Button variant="primary" size="large" href="#">SAVE THE DATE</Button>
+
+   <!-- Hero -->
+
+  <article id="index_header" class="pb-8 border-b-[2px] border-[#F4F4F4]">
+    <h1 class="text-grøn px-10 lg:px-16 lg:pl-36">Digital skraldedag</h1>
+    <h2 class="text-pink mt-2 px-10 lg:px-16 lg:pl-36">15 marts 2024</h2>
+    <p class="text-hvid mt-4 px-10 lg:px-16 lg:pl-36 lg:max-w-screen-md	">Digital Cleanup Day er en dag dedikeret til at rydde op i vores digitale liv, ligesom vi rydder op i vores fysiske miljø på World Cleanup Day.</p>
+    <div class="pl-10 pb-5 lg:px-16 lg:pl-36 lg:pb-0 mt-5 lg:mt-16">
+      <Image src={mainmaskot} alt="Maskot til Digital Skraldedag"/>
+    </div>
+    <div class="flex justify-center mb-12">
+      <Button variant="primary" size="large" href="#">SAVE THE DATE</Button>
+    </div>
     <div class="flex justify-center">
       <svg width="70" height="55" viewBox="-2.5 -5 75 60" preserveAspectRatio="none" class="motion-safe:animate-bounce w-8 h-6">
         <path d="M0,0 l35,50 l35,-50" fill="#1A1A1A" stroke="#F4F4F4" stroke-linecap="round" stroke-width="8" />
@@ -26,69 +33,85 @@ import info3 from "../assets/images/co2_icon.svg"
     </div>
   </article>
 
+   <!-- Facts -->
+
   <div id="border" class="">
-    <section id="index_facts" class="py-10 border-b-[2px] border-[#F4F4F4]">
-      <div class="px-10">
-        <h2 class="text-grøn">Hvad er digitaltskrald?</h2>
-        <p class="text-hvid mt-5">Digitalt affald refererer til al data, der bliver gemt online unødigt. Gamle billeder, unødvendige beskeder, reklame-e-mails og internetdownloads, blandt andet. Al denne aktivitet udleder tons CO2, der forurener planeten.</p>
+    <section id="index_facts" class=" border-b-[2px] border-[#F4F4F4] grid lg:grid-cols-2">
+      <div class="lg:border-r-[2px] ">
+        <div class="px-10 pt-10 lg:px-16 lg:pl-36">
+          <h2 class="text-grøn">Hvad er digitaltskrald?</h2>
+          <p class="text-hvid mt-5">Digitalt affald refererer til al data, der bliver gemt online unødigt. Gamle billeder, unødvendige beskeder, reklame-e-mails og internetdownloads, blandt andet. Al denne aktivitet udleder tons CO2, der forurener planeten.</p>
+        </div>
+        <div class="flex justify-center py-6">
+          <Image src={pinkstar} alt="Pink stjerne"/>
+        </div>
+        <div class="px-10 lg:px-16 lg:pl-36">
+          <h2 class="text-grøn">Problemet med Digitalt-skrald</h2>
+          <p class="text-hvid mt-5">Ud over at være et miljøproblem er e-affald også et klimaproblem. Elektroniske enheder kræver råmaterialer, herunder sjældne jordarters metaller, der udvindes og behandles i en meget energikrævende proces, hovedsagelig drevet af fossile brændstoffer.</p>
+        </div>
+        <div class="flex justify-center py-6 lg:invisible lg:py-0">
+          <Image src={pinkstar} alt="Pink stjerne"/>
+        </div>
       </div>
-      <div class="flex justify-center py-6">
-        <Image src={pinkstar} alt="Pink stjerne"/>
-      </div>
-      <div class="px-10">
-        <h2 class="text-grøn">Problemet med Digitalt-skrald</h2>
-        <p class="text-hvid mt-5">Ud over at være et miljøproblem er e-affald også et klimaproblem. Elektroniske enheder kræver råmaterialer, herunder sjældne jordarters metaller, der udvindes og behandles i en meget energikrævende proces, hovedsagelig drevet af fossile brændstoffer.</p>
-      </div>
-      <div class="flex justify-center py-6 lg:invisible">
-        <Image src={pinkstar} alt="Pink stjerne"/>
-      </div>
-      <div class="px-10">
+      <div class="px-10 pb-10 lg:pt-10 lg:px-16 lg:pr-36">
         <h2 class="text-grøn">Vidste du...?</h2>
         <ul class="text-hvid mt-4 pl-4 list-disc">
-          <li class="pb-2">Det kræver mere energi at mine for BitCoin, end hele New Zealand bruger på et år!</li>
-          <li class="pb-2">På kun et år (2007) blev der skabt én zettabyte data på verdensplan. I 2010 var dette fordoblet. I 2035 vil vi skabe mere end 2.000 zettabyte. For at udskrive en zettabyte data skal du bruge papiret fra 20 billioner træer. Der er kun omkring 3,5 billioner træer tilbage på planeten, så det er ikke muligt.</li>
-          <li class="pb-2">I 2022 blev omkring 70 millioner servere brugt til at lagre data. Hver af dem forårsagede produktion af 1-2 tons CO2. I det år blev omkring 20 millioner af dem til e-affald.</li>
-          <li class="pb-2">99 % af dataene blev skabt inden for de sidste 10 år.</li>
-          <li class="pb-2">Ubegrænset forbrug af data i dag kræver 3 gange mere energi end alle de solpaneler, verden kan producere!</li>
+          <li class="pb-3">Det kræver mere energi at mine for BitCoin, end hele New Zealand bruger på et år!</li>
+          <li class="pb-3">På kun et år (2007) blev der skabt én zettabyte data på verdensplan. I 2010 var dette fordoblet. I 2035 vil vi skabe mere end 2.000 zettabyte. For at udskrive en zettabyte data skal du bruge papiret fra 20 billioner træer. Der er kun omkring 3,5 billioner træer tilbage på planeten, så det er ikke muligt.</li>
+          <li class="pb-3">I 2022 blev omkring 70 millioner servere brugt til at lagre data. Hver af dem forårsagede produktion af 1-2 tons CO2. I det år blev omkring 20 millioner af dem til e-affald.</li>
+          <li class="pb-3">99 % af dataene blev skabt inden for de sidste 10 år.</li>
+          <li class="pb-3">Ubegrænset forbrug af data i dag kræver 3 gange mere energi end alle de solpaneler, verden kan producere!</li>
         </ul>
     </section>
   </div>
 
-  <article id="index_action" class="py-10">
-    <div class="pb-12 border-b-[2px] border-[#F4F4F4]">
-        <div class="px-10">
-        <h2 class="text-grøn">Registrer dit bidrag</h2>
-        <p class="text-hvid mt-4">Vær cool – lad være med at fodre global opvarmning med digitalt affald</p>
-        <Image src={sweatmaskot} alt="Maskot til Digital Skraldedag" class="mx-auto mt-5"/>
-        <div class="flex justify-center py-6">
-          <Button variant="secondary" size="medium" href="#">DIT BIDRAG</Button>
+   <!-- Action -->
+
+  <article id="index_action" class=" grid lg:grid-cols-2">
+    <div class="border-b-[2px] border-[#F4F4F4] lg:border-r-[2px]">
+      <div class="py-10 pb-12">
+        <div class="px-10 lg:px-16 lg:pl-36">
+          <h2 class="text-grøn">Registrer dit bidrag</h2>
+          <p class="text-hvid mt-4">Vær cool – lad være med at fodre global opvarmning med digitalt affald</p>
+          <div class="">
+            <Image src={sweatmaskot} alt="Maskot til Digital Skraldedag" class="mx-auto mt-5"/>
+            <div class="flex justify-center py-6">
+              <Button variant="secondary" size="medium" href="#">DIT BIDRAG</Button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="pb-12 border-b-[2px] border-[#F4F4F4]">
-      <div class="px-10">
+      <div class="px-10 lg:px-16 lg:pr-36">
+        <div class="">
         <Image src={friendsmaskot} alt="Maskot til Digital Skraldedag" class="pt-10"/>
         <div class="flex justify-center py-6">
           <Button variant="tertiary" size="medium" href="#">INVITER EN VEN</Button>
         </div>
+        </div>
       </div>
     </div>
   </article>
+
+   <!-- Infotal -->
   
-  <section id="index_infotal" class="px-10">
-    <h2 class="text-grøn">Digital skraldedag i tal</h2>
-    <div id="tal_grid1" class="grid grid-rows-2 gap-2 mt-10">
-      <Image src={info1} alt="Info" class="mx-auto"/>
-      <p class="text-hvid mx-auto text-center	">1,184,747<br>deltagere</p>
-    </div>
-    <div id="tal_grid1" class="grid grid-rows-2 gap-2 mt-10">
-      <Image src={info2} alt="Info" class="mx-auto"/>
-      <p class="text-hvid mx-auto text-center	">14.5M GB<br>data slettet</p>
-    </div>
-    <div id="tal_grid1" class="grid grid-rows-2 gap-2 mt-10">
-      <Image src={info3} alt="Info" class="mx-auto"/>
-      <p class="text-hvid mx-auto text-center	">3,625 tons<br>CO2 produktion<br>forhindret årligt*</p>
+  <section id="index_infotal" class="px-10 lg:px-36">
+    <h2 class="text-grøn mt-10">Digital skraldedag i tal</h2>
+    <div class="grid lg:grid-cols-3">
+      <div id="tal_grid1" class="grid grid-rows-2 gap-2 mt-10">
+        <Image src={info1} alt="Info" class="mx-auto"/>
+        <p class="text-hvid mx-auto text-center	">1,184,747<br>deltagere</p>
+      </div>
+      <div id="tal_grid1" class="grid grid-rows-2 gap-2 mt-10">
+        <Image src={info2} alt="Info" class="mx-auto"/>
+        <p class="text-hvid mx-auto text-center	">14.5M GB<br>data slettet</p>
+      </div>
+      <div id="tal_grid1" class="grid grid-rows-2 gap-2 mt-10">
+        <Image src={info3} alt="Info" class="mx-auto"/>
+        <p class="text-hvid mx-auto text-center	">3,625 tons<br>CO2 produktion<br>forhindret årligt*</p>
+      </div>
     </div>
   </section>
 </div>
