@@ -10,6 +10,9 @@ import pinkstar from "../assets/images/vector-3.svg";
 import info1 from "../assets/images/people_icon.svg"
 import info2 from "../assets/images/gb_icon.svg"
 import info3 from "../assets/images/co2_icon.svg"
+import star1 from "../assets/images/vector-1.svg"
+import star2 from "../assets/images/vector-2.svg"
+import star3 from "../assets/images/vector-9.svg"
 ---
 
 <MainLayout title="Digital skraldedag">
@@ -20,8 +23,8 @@ import info3 from "../assets/images/co2_icon.svg"
     <h1 class="text-grøn px-10 lg:px-16 lg:pl-36">Digital skraldedag</h1>
     <h2 class="text-pink mt-2 px-10 lg:px-16 lg:pl-36">15 marts 2024</h2>
     <p class="text-hvid mt-4 px-10 lg:px-16 lg:pl-36 lg:max-w-screen-md	">Digital Cleanup Day er en dag dedikeret til at rydde op i vores digitale liv, ligesom vi rydder op i vores fysiske miljø på World Cleanup Day.</p>
-    <div class="pl-10 pb-5 lg:px-16 lg:pl-36 lg:pb-0 mt-5 lg:mt-16">
-      <Image src={mainmaskot} alt="Maskot til Digital Skraldedag"/>
+    <div class="pl-10 pb-5 lg:px-16 lg:pl-36 lg:pb-0 mt-5 lg:mt-16 flex justify-center lg:justify-normal	">
+      <Image src={mainmaskot} alt="Maskot til Digital Skraldedag" loading="lazy"/>
     </div>
     <div class="flex justify-center mb-12">
       <Button variant="primary" size="large" href="#">SAVE THE DATE</Button>
@@ -33,6 +36,12 @@ import info3 from "../assets/images/co2_icon.svg"
     </div>
   </article>
 
+  <section class="absolute inset-0 z-[-500] pointer-events-none">
+    <Image src={star1} alt="Stjerne" loading="lazy" class="w-[150px] lg:w-[170px] absolute top-[350px] lg:top-[200px] right-[400px] lg:right-[550px] z-500 stroke-white-500"/>
+    <Image src={star2} alt="Stjerne" loading="lazy" class="w-[300px] lg:w-[400px] absolute top-[500px] lg:top-[330px] right-[300px] lg:right-[250px] z-500"/>
+    <Image src={star3} alt="Stjerne" loading="lazy" class="w-[260px] lg:w-[250px] absolute top-[400px] lg:top-[150px] right-[-100px] lg:right-[120px] z-500"/>
+  </section>
+
    <!-- Facts -->
 
   <div id="border" class="">
@@ -43,14 +52,14 @@ import info3 from "../assets/images/co2_icon.svg"
           <p class="text-hvid mt-5">Digitalt affald refererer til al data, der bliver gemt online unødigt. Gamle billeder, unødvendige beskeder, reklame-e-mails og internetdownloads, blandt andet. Al denne aktivitet udleder tons CO2, der forurener planeten.</p>
         </div>
         <div class="flex justify-center py-6">
-          <Image src={pinkstar} alt="Pink stjerne"/>
+          <Image src={pinkstar} alt="Pink stjerne" loading="lazy"/>
         </div>
         <div class="px-10 lg:px-16 lg:pl-36">
           <h2 class="text-grøn">Problemet med Digitalt-skrald</h2>
           <p class="text-hvid mt-5">Ud over at være et miljøproblem er e-affald også et klimaproblem. Elektroniske enheder kræver råmaterialer, herunder sjældne jordarters metaller, der udvindes og behandles i en meget energikrævende proces, hovedsagelig drevet af fossile brændstoffer.</p>
         </div>
         <div class="flex justify-center py-6 lg:invisible lg:py-0">
-          <Image src={pinkstar} alt="Pink stjerne"/>
+          <Image src={pinkstar} alt="Pink stjerne" loading="lazy"/>
         </div>
       </div>
       <div class="px-10 pb-10 lg:pt-10 lg:px-16 lg:pr-36">
@@ -72,9 +81,9 @@ import info3 from "../assets/images/co2_icon.svg"
       <div class="py-10 pb-12">
         <div class="px-10 lg:px-16 lg:pl-36">
           <h2 class="text-grøn">Registrer dit bidrag</h2>
-          <p class="text-hvid mt-4">Vær cool – lad være med at fodre global opvarmning med digitalt affald</p>
+          <p class="text-hvid mt-4">Vær cool - lad være med at fodre global opvarmning med digitalt affald</p>
           <div class="">
-            <Image src={sweatmaskot} alt="Maskot til Digital Skraldedag" class="mx-auto mt-5"/>
+            <Image src={sweatmaskot} alt="Maskot til Digital Skraldedag" class="mx-auto mt-12" loading="lazy"/>
             <div class="flex justify-center py-6">
               <Button variant="secondary" size="medium" href="#">DIT BIDRAG</Button>
             </div>
@@ -85,8 +94,10 @@ import info3 from "../assets/images/co2_icon.svg"
 
     <div class="pb-12 border-b-[2px] border-[#F4F4F4]">
       <div class="px-10 lg:px-16 lg:pr-36">
+        <h2 class="text-grøn pt-10">Få en ven til at deltage med!</h2>
+          <p class="text-hvid mt-4">Digital Oprydningsdag 2025 finder sted den 15. marts. - Få en ven med!</p>
         <div class="">
-        <Image src={friendsmaskot} alt="Maskot til Digital Skraldedag" class="pt-10"/>
+        <Image src={friendsmaskot} alt="Maskot til Digital Skraldedag" class="mt-2" loading="lazy"/>
         <div class="flex justify-center py-6">
           <Button variant="tertiary" size="medium" href="#">INVITER EN VEN</Button>
         </div>
@@ -101,15 +112,15 @@ import info3 from "../assets/images/co2_icon.svg"
     <h2 class="text-grøn mt-10">Digital skraldedag i tal</h2>
     <div class="grid lg:grid-cols-3">
       <div id="tal_grid1" class="grid grid-rows-2 gap-2 mt-10">
-        <Image src={info1} alt="Info" class="mx-auto"/>
+        <Image src={info1} alt="Info" class="mx-auto" loading="lazy"/>
         <p class="text-hvid mx-auto text-center	">1,184,747<br>deltagere</p>
       </div>
       <div id="tal_grid1" class="grid grid-rows-2 gap-2 mt-10">
-        <Image src={info2} alt="Info" class="mx-auto"/>
+        <Image src={info2} alt="Info" class="mx-auto" loading="lazy"/>
         <p class="text-hvid mx-auto text-center	">14.5M GB<br>data slettet</p>
       </div>
       <div id="tal_grid1" class="grid grid-rows-2 gap-2 mt-10">
-        <Image src={info3} alt="Info" class="mx-auto"/>
+        <Image src={info3} alt="Info" class="mx-auto" loading="lazy"/>
         <p class="text-hvid mx-auto text-center	">3,625 tons<br>CO2 produktion<br>forhindret årligt*</p>
       </div>
     </div>
