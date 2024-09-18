@@ -1,11 +1,47 @@
 ---
 
+// Henter parametrene fra Astro.props
+
+const { variant= "primary", size = "medium" } = Astro.props; 
+
+ 
+//Definer den styling (Tailwind classes, der gør sig gældende for alle knapper
+
+const buttonStyling = "bg-[#F4F4F4] border-2 border-[#1A1A1A] rounded-lg text-black hover:bg-[#E2E2E2] hover:transition duration-150"; 
+
+ 
+//Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter 
+
+const variantClasses = {
+
+"primary": "shadow-[4px_4px_0px_0px_#CDF545] hover:shadow-[4px_4px_0px_0px_#7E86FF]",
+"secondary": "shadow-[4px_4px_0px_0px_#7E86FF] hover:shadow-[4px_4px_0px_0px_#FED12E]",
+"tertiary": "shadow-[4px_4px_0px_0px_#36B7FF] hover:shadow-[4px_4px_0px_0px_#FEB3D2]"
+};
+
+ 
+//Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.
+
+const sizeClasses = {
+
+"large": "px-8 py-3 font-semibold text-xl",
+"medium": "px-6 py-2 font-semibold text-lg",
+"small": "px-4 py-2 font-semibold text-lg"
+
+};
+
 ---
 
-<div>
+<button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}><slot /></button>
+
+<!-- <div>
+    <button class="bg-slate-900  text-white rounded-full text-lg hover:bg-slate-100 hover:text-slate-900 hover: border-slate-900 hover:transition duration-150"><slot /></button>
+</div> -->
+
+<!-- <div>
   <button
-    class="px-6 py-2 bg-white border-2 border-black text-black font-medium text-lg rounded-lg shadow-[4px_4px_0px_0px_#36B7FF] hover:shadow-none"
+    class="   hover:shadow-none"
   >
     <slot />
   </button>
-</div>
+</div> -->

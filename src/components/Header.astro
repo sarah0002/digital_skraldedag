@@ -8,28 +8,47 @@ import Link from "../components/Link.astro";
 >
   <div id="navbar" class="flex flex-row justify-between py-5 px-2 z-1000">
     <div id="logo" class="text-hvid">
-      <a href="/index">Site logo</a>
+      <a href="/index"
+        ><img src="src/assets/images/logo.svg" alt="Logo" class="w-[80px]" /></a
+      >
     </div>
     <nav id="desktopmenu" class="hidden lg:block">
       <ul class="flex flex-row gap-4 text-hvid verdana">
-        <li class="">
-          <Link href="/ressourcer">Ressourcer og materialer</Link>
+        <li><Link href="/ressourcer">Ressourcer og materialer</Link></li>
+        <li>
+          <Link href="/howto">Sådan deltager du</Link>
         </li>
-        <li class=""><Link href="/howto">Sådan deltager du</Link></li>
-        <li class=""><Link href="/forms">Registrer dit bidrag</Link></li>
+        <li><Link href="/forms">Registrer dit bidrag</Link></li>
       </ul>
     </nav>
-    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu"
-      ><svg
+    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = !showmenu">
+      <!-- Burger -->
+      <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
         fill="currentColor"
-        class="size-5 fill-hvid"
+        viewBox="0 0 20 20"
+        class="w-9 h-9 fill-hvid"
+        x-show="!showmenu"
       >
         <path
           fill-rule="evenodd"
           d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Zm0 5.25a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
           clip-rule="evenodd"></path>
+      </svg>
+      <!-- Kryds -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        class="w-9 h-9 stroke-hvid"
+        x-show="showmenu"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18 18 6M6 6l12 12"></path>
       </svg>
     </button>
   </div>
