@@ -6,6 +6,7 @@ import { Image } from "astro:assets";
 import mainmaskot from "../assets/images/main.svg";
 import sweatmaskot from "../assets/images/sweat.svg";
 import friendsmaskot from "../assets/images/friends.svg";
+import "motion";
 ---
 
 <MainLayout title="Titel">
@@ -59,68 +60,97 @@ import friendsmaskot from "../assets/images/friends.svg";
       <Button variant="primary">Markedsføringsmateriale</Button>
     </section>
     <section>
-      <img
-        src="src/assets/images/vector-1.svg"
-        alt="Figur i svg"
-        loading="lazy"
-        class="w-[40px] lg:w-[100px] absolute top-[550px] left-8 lg:left-[300px]"
-      />
-      <img
-        src="src/assets/images/vector-2.svg"
-        alt="Figur i svg"
-        loading="lazy"
-        class="w-[40px] lg:w-[100px] absolute top-[700px] left-8 lg:left-[70px]"
-      />
-      <img
-        src="src/assets/images/vector-3.svg"
-        alt="Figur i svg"
-        loading="lazy"
-        class="absolute lg:w-[100px] top-[850px] left-4 lg:left-[300px]"
-      />
-      <img
-        src="src/assets/images/vector-6.svg"
-        alt="Figur i svg"
-        loading="lazy"
-        class="w-[40px] lg:w-[100px] absolute top-[950px] left-3 lg:left-[100px]"
-      />
-      <img
-        src="src/assets/images/vector-5.svg"
-        alt="Figur i svg"
-        loading="lazy"
-        class="w-[40px] lg:w-[100px] absolute top-[1150px] left-8 lg:left-[350px]"
-      />
-      <!-- højre -->
-      <img
-        src="src/assets/images/vector-3.svg"
-        alt="Figur i svg"
-        loading="lazy"
-        class="w-[40px] lg:w-[100px] absolute top-[500px] right-8 lg:right-[200px]"
-      />
-      <img
-        src="src/assets/images/vector-5.svg"
-        alt="Figur i svg"
-        loading="lazy"
-        class="w-[40px] lg:w-[100px] absolute top-[700px] right-8 lg:right-[400px]"
-      />
-      <img
-        src="src/assets/images/vector-1.svg"
-        alt="Figur i svg"
-        loading="lazy"
-        class="w-[40px] lg:w-[100px] absolute top-[850px] right-4 lg:right-[70px]"
-      />
-      <img
-        src="src/assets/images/vector-3.svg"
-        alt="Figur i svg"
-        loading="lazy"
-        class="w-[40px] lg:w-[100px] absolute top-[1000px] right-3 lg:right-[300px]"
-      />
-      <img
-        src="src/assets/images/vector-6.svg"
-        alt="Figur i svg"
-        loading="lazy"
-        class="w-[40px] lg:w-[100px] absolute top-[1150px] right-8 lg:right-[200px]"
-      />
+      <div id="venstre_svg">
+        <img
+          src="src/assets/images/vector-1.svg"
+          alt="Figur i svg"
+          loading="lazy"
+          class="w-[40px] lg:w-[100px] absolute top-[550px] left-8 lg:left-[300px]"
+        />
+        <img
+          src="src/assets/images/vector-2.svg"
+          alt="Figur i svg"
+          loading="lazy"
+          class="w-[40px] lg:w-[100px] absolute top-[700px] left-8 lg:left-[70px]"
+        />
+        <img
+          src="src/assets/images/vector-3.svg"
+          alt="Figur i svg"
+          loading="lazy"
+          class="absolute lg:w-[100px] top-[850px] left-4 lg:left-[300px]"
+        />
+        <img
+          src="src/assets/images/vector-6.svg"
+          alt="Figur i svg"
+          loading="lazy"
+          class="w-[40px] lg:w-[100px] absolute top-[950px] left-3 lg:left-[100px]"
+        />
+        <img
+          src="src/assets/images/vector-5.svg"
+          alt="Figur i svg"
+          loading="lazy"
+          class="w-[40px] lg:w-[100px] absolute top-[1150px] left-8 lg:left-[350px]"
+        />
+      </div>
+      <div id="hojre_svg">
+        <img
+          src="src/assets/images/vector-3.svg"
+          alt="Figur i svg"
+          loading="lazy"
+          class="w-[40px] lg:w-[100px] absolute top-[500px] right-8 lg:right-[200px]"
+        />
+        <img
+          src="src/assets/images/vector-5.svg"
+          alt="Figur i svg"
+          loading="lazy"
+          class="w-[40px] lg:w-[100px] absolute top-[700px] right-8 lg:right-[400px]"
+        />
+        <img
+          src="src/assets/images/vector-1.svg"
+          alt="Figur i svg"
+          loading="lazy"
+          class="w-[40px] lg:w-[100px] absolute top-[850px] right-4 lg:right-[70px]"
+        />
+        <img
+          src="src/assets/images/vector-3.svg"
+          alt="Figur i svg"
+          loading="lazy"
+          class="w-[40px] lg:w-[100px] absolute top-[1000px] right-3 lg:right-[300px]"
+        />
+        <img
+          src="src/assets/images/vector-6.svg"
+          alt="Figur i svg"
+          loading="lazy"
+          class="w-[40px] lg:w-[100px] absolute top-[1150px] right-8 lg:right-[200px]"
+        />
+      </div>
     </section>
     <hr />
   </article>
+
+  <script>
+    import { inView } from "motion";
+
+    // <-- inview højre svg er -->
+    const hojre_svgFadeup = document.querySelector("#hojre_svg");
+
+    inView(hojre_svgFadeup, () => {
+      hojre_svgFadeup.classList.add(
+        "animate__animated",
+        "animate__bounceInRight",
+        "animate__slow"
+      );
+    });
+
+    // <-- inview venstre svg er -->
+    const venstre_svgFadeup = document.querySelector("#venstre_svg");
+
+    inView(venstre_svgFadeup, () => {
+      venstre_svgFadeup.classList.add(
+        "animate__animated",
+        "animate__bounceInLeft",
+        "animate__slow"
+      );
+    });
+  </script>
 </MainLayout>
