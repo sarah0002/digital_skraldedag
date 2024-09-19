@@ -25,6 +25,7 @@ import calendar from "../assets/images/calendar_icon.svg";
   <!-- <hr class="border-2" /> -->
   <div class="grid lg:grid-cols-2">
     <article
+      id="trin_1"
       class="py-7 px-10 border-b-[2px] border-[#F4F4F4] lg:grid justify-center lg:border-r-[2px]"
     >
       <h2 class="text-grøn font-bold">TRIN 1</h2>
@@ -42,6 +43,7 @@ import calendar from "../assets/images/calendar_icon.svg";
       </div>
     </article>
     <article
+      id="trin_2"
       class="py-7 px-10 border-b-[2px] border-[#F4F4F4] grid justify-center"
     >
       <h2 class="text-grøn font-bold">TRIN 2</h2>
@@ -60,6 +62,7 @@ import calendar from "../assets/images/calendar_icon.svg";
     </article>
 
     <article
+      id="trin_3"
       class="py-7 px-10 border-b-[2px] border-[#F4F4F4] grid justify-center lg:border-r-[2px]"
     >
       <h2 class="text-grøn font-bold">TRIN 3</h2>
@@ -77,6 +80,7 @@ import calendar from "../assets/images/calendar_icon.svg";
       </div>
     </article>
     <article
+      id="trin_4"
       class="py-7 px-10 border-b-[2px] border-[#F4F4F4] grid justify-center"
     >
       <h2 class="text-grøn font-bold">TRIN 4</h2>
@@ -101,6 +105,56 @@ import calendar from "../assets/images/calendar_icon.svg";
       <Button variant="primary" size="large" href="#">Save the date</Button>
     </div>
   </article>
+
+  <script>
+    import { inView } from "motion";
+
+    // <-- inview trin 1 er -->
+    const trin_1Fadeup = document.querySelector("#trin_1");
+
+    inView(trin_1Fadeup, () => {
+      trin_1Fadeup.classList.add(
+        "animate__animated",
+        "animate__fadeInUpBig",
+        "animate__slow"
+      );
+    });
+
+    // <-- inview trin 2 er -->
+    const trin_2Fadeup = document.querySelector("#trin_2");
+
+    inView(trin_2Fadeup, () => {
+      trin_2Fadeup.classList.add(
+        "animate__animated",
+        "animate__fadeInUpBig",
+        "animate__slow"
+      );
+    });
+
+    // <-- inview trin 3 er -->
+    const trin_3Fadeup = document.querySelector("#trin_3");
+
+    inView(trin_3Fadeup, () => {
+      trin_3Fadeup.classList.add(
+        "animate__animated",
+        "animate__fadeInUpBig",
+        "animate__delay-0.75s",
+        "animate__slow"
+      );
+    });
+    // <-- inview trin 4 er -->
+    const trin_4Fadeup = document.querySelector("#trin_4");
+
+    inView(trin_4Fadeup, () => {
+      trin_4Fadeup.classList.add(
+        "animate__animated",
+        "animate__fadeInUpBig",
+        "animate__delay-0.75s",
+
+        "animate__slow"
+      );
+    });
+  </script>
 </MainLayout>
 
 <style>
