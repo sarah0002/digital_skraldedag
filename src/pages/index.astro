@@ -97,7 +97,7 @@ import "motion";
           <h2 class="text-grøn font-bold font-verdana">
             Hvad er digitaltskrald?
           </h2>
-          <p class="text-hvid mt-5 font-arial">
+          <p class="text-hvid mt-5 max-w-lg font-arial">
             Digitalt affald refererer til al data, der bliver gemt online
             unødigt. Gamle billeder, unødvendige beskeder, reklame-e-mails og
             internetdownloads, blandt andet. Al denne aktivitet udleder tons
@@ -111,7 +111,7 @@ import "motion";
           <h2 class="text-grøn font-bold font-verdana">
             Problemet med Digitalt-skrald
           </h2>
-          <p class="text-hvid mt-5 font-arial">
+          <p class="text-hvid mt-5 max-w-lg font-arial">
             Ud over at være et miljøproblem er e-affald også et klimaproblem.
             Elektroniske enheder kræver råmaterialer, herunder sjældne
             jordarters metaller, der udvindes og behandles i en meget
@@ -124,7 +124,7 @@ import "motion";
       </div>
       <div class="px-10 pb-10 lg:pt-10 lg:px-16 lg:pr-36">
         <h2 class="text-grøn font-bold font-verdana">Vidste du...?</h2>
-        <ul class="text-hvid mt-4 pl-4 list-disc font-arial">
+        <ul class="text-hvid mt-4 pl-4 max-w-lg list-disc font-arial">
           <li class="pb-3">
             Det kræver mere energi at mine for BitCoin, end hele New Zealand
             bruger på et år!
@@ -156,138 +156,136 @@ import "motion";
     <section class="grid lg:grid-cols-2">
       <article id="action_1">
         <div class="border-b-[2px] border-[#F4F4F4] lg:border-r-[2px]">
-        <div class="py-10 pb-12">
-          <div class="px-10 lg:px-16 lg:pl-36">
-            <h2 class="text-grøn font-bold font-verdana">
-              Registrer dit bidrag
-            </h2>
-            <p class="text-hvid mt-4 font-arial">
-              Vær cool - lad være med at fodre global opvarmning med digitalt
-              affald
-            </p>
-            <div class="">
-              <Image
-                src={sweatmaskot}
-                alt="Maskot til Digital Skraldedag"
-                class="mx-auto mt-12"
-                loading="lazy"
-              />
-              <div class="flex justify-center py-6">
-                <a href="/forms"
-                  ><Button variant="secondary" size="medium">
-                    Dit bidrag
-                  </Button></a
-                >
+          <div class="py-10 pb-12">
+            <div class="px-10 lg:px-16 lg:pl-36">
+              <h2 class="text-grøn font-bold font-verdana">
+                Registrer dit bidrag
+              </h2>
+              <p class="text-hvid mt-4 font-arial">
+                Vær cool - lad være med at fodre global opvarmning med digitalt
+                affald
+              </p>
+              <div class="">
+                <Image
+                  src={sweatmaskot}
+                  alt="Maskot til Digital Skraldedag"
+                  class="mx-auto mt-12"
+                  loading="lazy"
+                />
+                <div class="flex justify-center py-6">
+                  <a href="/forms"
+                    ><Button variant="secondary" size="medium">
+                      Dit bidrag
+                    </Button></a
+                  >
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </article>
-      <article id="action_2">
-        <div class="pb-12 border-b-[2px] border-[#F4F4F4]">
-          <div class="px-10 lg:px-16 lg:pr-36">
-            <h2 class="text-grøn pt-10 font-bold font-verdana">
-              Få en ven til at deltage!
-            </h2>
-            <p class="text-hvid mt-4 font-arial">
-              Digital Oprydningsdag 2025 finder sted den 15. marts. - Få en ven
-              med!
-            </p>
-            <div class="">
-              <Image
-                src={friendsmaskot}
-                alt="Maskot til Digital Skraldedag"
-                class="mt-2"
-                loading="lazy"
-              />
-              <div class="flex justify-center py-6">
-                <a href="#"
-                  ><Button variant="tertiary" size="medium">
-                    Inviter en ven
-                  </Button></a
-                >
+        <article id="action_2">
+          <div class="pb-12 border-b-[2px] border-[#F4F4F4]">
+            <div class="px-10 lg:px-16 lg:pr-36">
+              <h2 class="text-grøn pt-10 font-bold font-verdana">
+                Få en ven til at deltage!
+              </h2>
+              <p class="text-hvid mt-4 font-arial">
+                Digital Oprydningsdag 2025 finder sted den 15. marts. - Få en
+                ven med!
+              </p>
+              <div class="">
+                <Image
+                  src={friendsmaskot}
+                  alt="Maskot til Digital Skraldedag"
+                  class="mt-2"
+                  loading="lazy"
+                />
+                <div class="flex justify-center py-6">
+                  <a href="#"
+                    ><Button variant="tertiary" size="medium">
+                      Inviter en ven
+                    </Button></a
+                  >
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </article>
       </article>
     </section>
+
+    <!-- Infotal -->
+
+    <section id="infotal" class="px-10 lg:px-36 pb-12">
+      <h2 class="text-grøn mt-10 font-bold text-center font-verdana">
+        Digital skraldedag i tal
+      </h2>
+      <div class="grid lg:grid-cols-3 font-arial">
+        <div id="tal_grid1" class="grid grid-rows-2 gap-2 mt-10">
+          <Image src={info1} alt="Info" class="mx-auto" loading="lazy" />
+          <p class="text-hvid mx-auto text-center">1,184,747<br />deltagere</p>
+        </div>
+        <div id="tal_grid1" class="grid grid-rows-2 gap-2 mt-10">
+          <Image src={info2} alt="Info" class="mx-auto" loading="lazy" />
+          <p class="text-hvid mx-auto text-center">
+            14.5M GB<br />data slettet
+          </p>
+        </div>
+        <div id="tal_grid1" class="grid grid-rows-2 gap-2 mt-10">
+          <Image src={info3} alt="Info" class="mx-auto" loading="lazy" />
+          <p class="text-hvid mx-auto text-center">
+            3,625 tons<br />CO2 produktion<br />forhindret årligt*
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      import { inView } from "motion";
+
+      // <-- facts  er -->
+      const factsFadeup = document.querySelector("#facts");
+
+      inView(factsFadeup, () => {
+        factsFadeup.classList.add(
+          "animate__animated",
+          "animate__fadeInUpBig",
+          "animate__slow"
+        );
+      });
+
+      // <-- action 1 er -->
+      const action_1Fadeup = document.querySelector("#action_1");
+
+      inView(action_1Fadeup, () => {
+        action_1Fadeup.classList.add(
+          "animate__animated",
+          "animate__fadeInUpBig",
+          "animate__slow"
+        );
+      });
+
+      // <-- action 2 er -->
+      const action_2Fadeup = document.querySelector("#action_2");
+
+      inView(action_2Fadeup, () => {
+        action_2Fadeup.classList.add(
+          "animate__animated",
+          "animate__fadeInUpBig",
+          "animate__slow"
+        );
+      });
+
+      // <-- infotal er -->
+      const infotalFadeup = document.querySelector("#infotal");
+
+      inView(infotalFadeup, () => {
+        infotalFadeup.classList.add(
+          "animate__animated",
+          "animate__fadeInUpBig",
+          "animate__slow"
+        );
+      });
+    </script>
   </div>
-
-  <!-- Infotal -->
-
-  <section
-    id="infotal"
-    class="px-10 lg:px-36 pb-12"
-  >
-    <h2 class="text-grøn mt-10 font-bold text-center font-verdana">
-      Digital skraldedag i tal
-    </h2>
-    <div class="grid lg:grid-cols-3 font-arial">
-      <div id="tal_grid1" class="grid grid-rows-2 gap-2 mt-10">
-        <Image src={info1} alt="Info" class="mx-auto" loading="lazy" />
-        <p class="text-hvid mx-auto text-center">1,184,747<br />deltagere</p>
-      </div>
-      <div id="tal_grid1" class="grid grid-rows-2 gap-2 mt-10">
-        <Image src={info2} alt="Info" class="mx-auto" loading="lazy" />
-        <p class="text-hvid mx-auto text-center">
-          14.5M GB<br />data slettet
-        </p>
-      </div>
-      <div id="tal_grid1" class="grid grid-rows-2 gap-2 mt-10">
-        <Image src={info3} alt="Info" class="mx-auto" loading="lazy" />
-        <p class="text-hvid mx-auto text-center">
-          3,625 tons<br />CO2 produktion<br />forhindret årligt*
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    import { inView } from "motion";
-
-    // <-- facts  er -->
-    const factsFadeup = document.querySelector("#facts");
-
-    inView(factsFadeup, () => {
-      factsFadeup.classList.add(
-        "animate__animated",
-        "animate__fadeInUpBig",
-        "animate__slow"
-      );
-    });
-
-    // <-- action 1 er -->
-    const action_1Fadeup = document.querySelector("#action_1");
-
-    inView(action_1Fadeup, () => {
-      action_1Fadeup.classList.add(
-        "animate__animated",
-        "animate__fadeInUpBig",
-        "animate__slow"
-      );
-    });
-
-    // <-- action 2 er -->
-    const action_2Fadeup = document.querySelector("#action_2");
-
-    inView(action_2Fadeup, () => {
-      action_2Fadeup.classList.add(
-        "animate__animated",
-        "animate__fadeInUpBig",
-        "animate__slow"
-      );
-    });
-
-    // <-- infotal er -->
-    const infotalFadeup = document.querySelector("#infotal");
-
-    inView(infotalFadeup, () => {
-      infotalFadeup.classList.add(
-        "animate__animated",
-        "animate__fadeInUpBig",
-        "animate__slow"
-      );
-    });
-  </script>
 </MainLayout>
