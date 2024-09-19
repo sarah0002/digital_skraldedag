@@ -6,9 +6,9 @@ import Link from "../components/Link.astro";
   x-data="{ showmenu: false }"
   class="p-4 fixed lg:static w-full bg-sort sticky top-0"
 >
-  <div id="navbar" class="flex flex-row justify-between py-5 px-2 z-1000">
+  <div id="navbar" class="flex flex-row justify-between py-5 px-2">
     <div id="logo" class="text-hvid">
-      <a href="/index"
+      <a href="index.astro"
         ><img src="src/assets/images/logo.svg" alt="Logo" class="w-[80px]" /></a
       >
     </div>
@@ -27,7 +27,7 @@ import Link from "../components/Link.astro";
         xmlns="http://www.w3.org/2000/svg"
         fill="currentColor"
         viewBox="0 0 20 20"
-        class="w-9 h-9 fill-hvid"
+        class="w-9 h-9 fill-hvid bg-sort"
         x-show="!showmenu"
       >
         <path
@@ -54,20 +54,20 @@ import Link from "../components/Link.astro";
   </div>
   <nav
     id="mobilmenu"
-    class="flex flex-col content-center"
+    class="flex flex-col content-center bg-sort"
     x-show="showmenu"
     x-transition
     x-on:click="showmenu = false"
     x-on:click.outside="showmenu = false"
   >
     <ul class="Verdana">
-      <li class="text-center text-hvid py-2">
+      <li class="text-center text-hvid py-2 bg-sort">
         <Link href="/ressourcer">Ressourcer og materialer</Link>
       </li>
-      <li class="text-center text-hvid py-2">
+      <li class="text-center text-hvid py-2 bg-sort">
         <Link href="/howto">Sådan deltager du</Link>
       </li>
-      <li class="text-center text-hvid py-2">
+      <li class="text-center text-hvid py-2 bg-sort">
         <Link href="/forms">Registrer dit bidrag</Link>
       </li>
     </ul>
