@@ -127,30 +127,4 @@ import "motion";
     </section>
     <hr />
   </article>
-
-  <script>
-    import { inView } from "motion";
-
-    // <-- inview højre svg er -->
-    const hojre_svgFadeup = document.querySelector("#hojre_svg");
-
-    inView(hojre_svgFadeup, () => {
-      hojre_svgFadeup.classList.add(
-        "animate__animated",
-        "animate__bounceInRight",
-        "animate__slow"
-      );
-    });
-
-    // <-- inview venstre svg er -->
-    const venstre_svgFadeup = document.querySelector("#venstre_svg");
-
-    inView(venstre_svgFadeup, () => {
-      venstre_svgFadeup.classList.add(
-        "animate__animated",
-        "animate__bounceInLeft",
-        "animate__slow"
-      );
-    });
-  </script>
 </MainLayout>
