@@ -153,9 +153,12 @@ import "motion";
     </section>
 
     <!-- Action -->
-
-    <article id="action_1" class="grid lg:grid-cols-2">
-      <div class="border-b-[2px] border-[#F4F4F4] lg:border-r-[2px]">
+    <section class="grid lg:grid-cols-2">
+      <article
+        id="action_1"
+        <div
+        class="border-b-[2px] border-[#F4F4F4] lg:border-r-[2px]"
+      >
         <div class="py-10 pb-12">
           <div class="px-10 lg:px-16 lg:pl-36">
             <h2 class="text-grøn font-bold font-verdana">
@@ -182,32 +185,36 @@ import "motion";
             </div>
           </div>
         </div>
-      </div>
-    </article>
-
-    <div class="pb-12 border-b-[2px] border-[#F4F4F4]">
-      <div class="px-10 lg:px-16 lg:pr-36">
-        <h2 class="text-grøn pt-10 font-bold">Få en ven til at deltage!</h2>
-        <p class="text-hvid mt-4">
-          Digital Oprydningsdag 2025 finder sted den 15. marts. - Få en ven med!
-        </p>
-        <div class="">
-          <Image
-            src={friendsmaskot}
-            alt="Maskot til Digital Skraldedag"
-            class="mt-2"
-            loading="lazy"
-          />
-          <div class="flex justify-center py-6">
-            <a href="#"
-              ><Button variant="tertiary" size="medium">
-                Inviter en ven
-              </Button></a
-            >
+      </article>
+      <article id="action_2">
+        <div class="pb-12 border-b-[2px] border-[#F4F4F4]">
+          <div class="px-10 lg:px-16 lg:pr-36">
+            <h2 class="text-grøn pt-10 font-bold font-verdana">
+              Få en ven til at deltage!
+            </h2>
+            <p class="text-hvid mt-4 font-arial">
+              Digital Oprydningsdag 2025 finder sted den 15. marts. - Få en ven
+              med!
+            </p>
+            <div class="">
+              <Image
+                src={friendsmaskot}
+                alt="Maskot til Digital Skraldedag"
+                class="mt-2"
+                loading="lazy"
+              />
+              <div class="flex justify-center py-6">
+                <a href="#"
+                  ><Button variant="tertiary" size="medium">
+                    Inviter en ven
+                  </Button></a
+                >
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+      </article>
+    </section>
   </div>
 
   <!-- Infotal -->
@@ -238,52 +245,52 @@ import "motion";
       </div>
     </div>
   </section>
+
+  <script>
+    import { inView } from "motion";
+
+    // <-- facts  er -->
+    const factsFadeup = document.querySelector("#facts");
+
+    inView(factsFadeup, () => {
+      factsFadeup.classList.add(
+        "animate__animated",
+        "animate__fadeInUpBig",
+        "animate__slow"
+      );
+    });
+
+    // <-- action 1 er -->
+    const action_1Fadeup = document.querySelector("#action_1");
+
+    inView(action_1Fadeup, () => {
+      action_1Fadeup.classList.add(
+        "animate__animated",
+        "animate__fadeInUpBig",
+        "animate__slow"
+      );
+    });
+
+    // <-- action 2 er -->
+    const action_2Fadeup = document.querySelector("#action_2");
+
+    inView(action_2Fadeup, () => {
+      action_2Fadeup.classList.add(
+        "animate__animated",
+        "animate__fadeInUpBig",
+        "animate__slow"
+      );
+    });
+
+    // <-- infotal er -->
+    const infotalFadeup = document.querySelector("#infotal");
+
+    inView(infotalFadeup, () => {
+      infotalFadeup.classList.add(
+        "animate__animated",
+        "animate__fadeInUpBig",
+        "animate__slow"
+      );
+    });
+  </script>
 </MainLayout>
-
-<script>
-  import { inView } from "motion";
-
-  // <-- facts  er -->
-  const factsFadeup = document.querySelector("#facts");
-
-  inView(factsFadeup, () => {
-    factsFadeup.classList.add(
-      "animate__animated",
-      "animate__fadeInUpBig",
-      "animate__slow"
-    );
-  });
-
-  // <-- action 1 er -->
-  const action_1Fadeup = document.querySelector("#action_1");
-
-  inView(action_1Fadeup, () => {
-    action_1Fadeup.classList.add(
-      "animate__animated",
-      "animate__fadeInUpBig",
-      "animate__slow"
-    );
-  });
-
-  // <-- action 2 er -->
-  const action_2Fadeup = document.querySelector("#action_2");
-
-  inView(action_2Fadeup, () => {
-    action_2Fadeup.classList.add(
-      "animate__animated",
-      "animate__fadeInUpBig",
-      "animate__slow"
-    );
-  });
-
-  // <-- action 2 er -->
-  const infotalFadeup = document.querySelector("#infotal");
-
-  inView(infotalFadeup, () => {
-    infotalFadeup.classList.add(
-      "animate__animated",
-      "animate__fadeInUpBig",
-      "animate__slow"
-    );
-  });
-</script>
