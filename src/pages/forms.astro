@@ -4,6 +4,7 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
+import "motion";
 ---
 
 <MainLayout title="Titel">
@@ -131,43 +132,56 @@ import thumbsup from "../assets/images/thumbsup.png";
 
   <!-- Baggrundsformerne -->
   <section class="absolute inset-0 z-100 pointer-events-none">
-    <img
-      src="src/assets/images/vector-8.svg"
-      alt=""
-      class="w-[60px] lg:w-[100px] absolute top-[400px] left-32 lg:left-[40px] z-500 stroke-white-500"
-    />
-    <img
-      src="src/assets/images/vector-6.svg"
-      alt=""
-      class="w-[60px] lg:w-[600px] absolute top-[150px] right-56 lg:right-[350px] z-500"
-    />
-    <img
-      src="src/assets/images/vector-1.svg"
-      alt=""
-      class="w-[240px] lg:w-[400px] absolute top-[150px] -left-6 lg:left-[150px] z-500"
-    />
-    <img
-      src="src/assets/images/vector-2.svg"
-      alt=""
-      class="w-[400px] lg:w-[300px] absolute top-[500px] -right-10 lg:right-[20px]"
-    />
-    <img
-      src="src/assets/images/vector-3.svg"
-      alt=""
-      class="w-[80px] absolute lg:w-[150px] top-[480px] lg:top-[560px] left-2 lg:left-[90px]"
-    />
-    <img
-      src="src/assets/images/vector-4.svg"
-      alt=""
-      class="w-[190px] lg:w-[180px] absolute top-[600px] -left-2 lg:left-[400px]"
-    />
+    <div id="venstre_svg">
+      <img
+        src="src/assets/images/vector-8.svg"
+        alt="Figur i svg"
+        loading="lazy"
+        class="w-[60px] lg:w-[100px] absolute top-[400px] left-32 lg:left-[40px] z-500 stroke-white-500"
+      />
+      <img
+        src="src/assets/images/vector-6.svg"
+        alt="Figur i svg"
+        loading="lazy"
+        class="w-[60px] lg:w-[600px] absolute top-[150px] right-56 lg:right-[350px] z-500"
+      />
+      <img
+        src="src/assets/images/vector-1.svg"
+        alt="Figur i svg"
+        loading="lazy"
+        class="w-[240px] lg:w-[400px] absolute top-[150px] -left-6 lg:left-[150px] z-500"
+      />
+      <img
+        src="src/assets/images/vector-3.svg"
+        alt="Figur i svg"
+        loading="lazy"
+        id="venstre_svg"
+        class="w-[80px] absolute lg:w-[150px] top-[480px] lg:top-[560px] left-2 lg:left-[90px]"
+      />
+      <img
+        src="src/assets/images/vector-4.svg"
+        alt="Figur i svg"
+        loading="lazy"
+        id="venstre_svg"
+        class="w-[190px] lg:w-[180px] absolute top-[600px] -left-2 lg:left-[400px]"
+      />
+    </div>
 
-    <!-- højre -->
-    <img
-      src="src/assets/images/vector-3.svg"
-      alt=""
-      class="w-[200px] lg:w-[160px] absolute top-[200px] right-8 lg:right-[150px]"
-    />
+    <div id="hojre_svg">
+      <img
+        src="src/assets/images/vector-2.svg"
+        alt="Figur i svg"
+        loading="lazy"
+        class="w-[400px] lg:w-[300px] absolute top-[500px] -right-10 lg:right-[20px]"
+      />
+
+      <img
+        src="src/assets/images/vector-3.svg"
+        alt="Figur i svg"
+        loading="lazy"
+        class="w-[200px] lg:w-[160px] absolute top-[200px] right-8 lg:right-[150px]"
+      />
+    </div>
   </section>
 
   <!-- Maskot og talebobbel -->
@@ -177,7 +191,34 @@ import thumbsup from "../assets/images/thumbsup.png";
     <img
       src="src/assets/images/helt.svg"
       alt="Mascot med talebobbel"
+      loading="lazy"
       class="w-[400px] lg:w-[500px]"
     />
   </section>
+
+  <script>
+    import { inView } from "motion";
+
+    // <-- inview højre svg er -->
+    const hojre_svgFadeup = document.querySelector("#hojre_svg");
+
+    inView(hojre_svgFadeup, () => {
+      hojre_svgFadeup.classList.add(
+        "animate__animated",
+        "animate__bounceInRight",
+        "animate__slow"
+      );
+    });
+
+    // <-- inview venstre svg er -->
+    const venstre_svgFadeup = document.querySelector("#venstre_svg");
+
+    inView(venstre_svgFadeup, () => {
+      venstre_svgFadeup.classList.add(
+        "animate__animated",
+        "animate__bounceInLeft",
+        "animate__slow"
+      );
+    });
+  </script>
 </MainLayout>
