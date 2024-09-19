@@ -2,7 +2,10 @@
 import Link from "../components/Link.astro";
 ---
 
-<div x-data="{ showmenu: false }" class="p-4 fixed top-0 w-full bg-sort">
+<div
+  x-data="{ showmenu: false }"
+  class="p-4 fixed top-0 w-full bg-sort z-[5000]"
+>
   <div id="navbar" class="flex flex-row justify-between py-5 px-2">
     <div id="logo" class="text-hvid">
       <a href="/"
@@ -51,7 +54,7 @@ import Link from "../components/Link.astro";
   </div>
   <nav
     id="mobilmenu"
-    class="flex flex-col content-center bg-sort"
+    class="flex flex-col content-center bg-sort z-2000"
     x-show="showmenu"
     x-transition
     x-on:click="showmenu = false"
