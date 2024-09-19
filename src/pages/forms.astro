@@ -33,7 +33,9 @@ import helt from "../assets/images/helt.svg";
         <div class="lg:grid lg:grid-cols-2 gap-4 grid justify-items-center">
           <!-- Navn -->
           <div class="pb-5">
-            <label for="navn" class="block text-sort font-arial font-bold">Navn*</label>
+            <label for="navn" class="block text-sort font-arial font-bold"
+              >Navn*</label
+            >
             <input
               type="text"
               id="Navn"
@@ -44,7 +46,9 @@ import helt from "../assets/images/helt.svg";
           </div>
           <!-- Efternavn -->
           <div class="pb-5">
-            <label for="Efternavn" class="block text-sort font-arial font-bold">Efternavn*</label>
+            <label for="Efternavn" class="block text-sort font-arial font-bold"
+              >Efternavn*</label
+            >
             <input
               type="text"
               id="Efternavn"
@@ -58,7 +62,9 @@ import helt from "../assets/images/helt.svg";
         <div class="lg:grid lg:grid-cols-2 gap-4 grid justify-items-center">
           <!-- Email -->
           <div class="pb-5">
-            <label for="Email" class="block text-sort font-arial font-bold">E-mail*</label>
+            <label for="Email" class="block text-sort font-arial font-bold"
+              >E-mail*</label
+            >
             <input
               type="text"
               id="Email"
@@ -69,7 +75,9 @@ import helt from "../assets/images/helt.svg";
           </div>
           <!-- Telefon -->
           <div class="pb-5">
-            <label for="Telefon" class="block text-sort font-arial font-bold">Telefon*</label>
+            <label for="Telefon" class="block text-sort font-arial font-bold"
+              >Telefon*</label
+            >
             <input
               type="text"
               id="Telefon"
@@ -82,7 +90,9 @@ import helt from "../assets/images/helt.svg";
 
         <!-- GB -->
         <div class="pb-5 flex justify-items-center grid grid-cols-1">
-          <label for="GB" class="block text-sort font-arial font-bold">Antal slettet GB*</label>
+          <label for="GB" class="block text-sort font-arial font-bold"
+            >Antal slettet GB*</label
+          >
           <input
             type="text"
             id="GB"
@@ -98,11 +108,15 @@ import helt from "../assets/images/helt.svg";
         <div class="space-y-3">
           <div>
             <input type="checkbox" id="vilkaar" />
-            <label for="vilkaar" class="text-sort font-arial">Jeg er enig i vilkår og betingelser*</label>
+            <label for="vilkaar" class="text-sort font-arial"
+              >Jeg er enig i vilkår og betingelser*</label
+            >
           </div>
           <div>
             <input type="checkbox" id="nyhedsbrev" />
-            <label for="nyhedsbrev" class="text-sort font-arial">Tilmed nyhedsbrev</label>
+            <label for="nyhedsbrev" class="text-sort font-arial"
+              >Tilmed nyhedsbrev</label
+            >
           </div>
         </div>
       </div>
@@ -184,21 +198,29 @@ import helt from "../assets/images/helt.svg";
       class="w-[400px] lg:w-[500px]"
     />
   </section>
+  <script>
+    import { inView } from "motion";
 
-  <script type="module">
-    import { inView } from 'motion';
+    // <-- inview højre svg er -->
+    const hojre_svgFadeup = document.querySelector("#hojre_svg");
 
-    document.addEventListener('DOMContentLoaded', () => {
-      const hojre_svgFadeup = document.querySelector("#hojre_svg");
-      if (hojre_svgFadeup) {
-        inView(hojre_svgFadeup, () => {
-          hojre_svgFadeup.classList.add(
-            "animate__animated",
-            "animate__bounceInRight",
-            "animate__slow"
-          );
-        });
-      }
+    inView(hojre_svgFadeup, () => {
+      hojre_svgFadeup.classList.add(
+        "animate__animated",
+        "animate__bounceInRight",
+        "animate__slow"
+      );
+    });
 
-      const venstre_svgFadeup = document.querySelector("#venstre_svg");
-      if (venstre_svgFadeup)
+    // <-- inview venstre svg er -->
+    const venstre_svgFadeup = document.querySelector("#venstre_svg");
+
+    inView(venstre_svgFadeup, () => {
+      venstre_svgFadeup.classList.add(
+        "animate__animated",
+        "animate__bounceInLeft",
+        "animate__slow"
+      );
+    });
+  </script>
+</MainLayout>
