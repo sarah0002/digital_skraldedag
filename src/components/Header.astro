@@ -1,5 +1,6 @@
 ---
 import Link from "../components/Link.astro";
+import logo from "../assets/images/logo.svg";
 ---
 
 <div
@@ -8,9 +9,7 @@ import Link from "../components/Link.astro";
 >
   <div id="navbar" class="flex flex-row justify-between py-5 px-2">
     <div id="logo" class="text-hvid">
-      <a href="/"
-        ><img src="src/assets/images/logo.svg" alt="Logo" class="w-[80px]" /></a
-      >
+      <a href="/"><Image src={logo} alt="Logo" class="w-[80px]" /></a>
     </div>
     <nav id="desktopmenu" class="hidden lg:block">
       <ul class="flex flex-row gap-6 text-hvid verdana">
